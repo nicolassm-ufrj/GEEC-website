@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -106,6 +108,7 @@ nav ul li a {
 
 
 .box {
+    font-family: "Instrument Sans",  Arial, Helvetica, sans-serif;
     position: absolute;
     top: 10%;
     right: 400px;
