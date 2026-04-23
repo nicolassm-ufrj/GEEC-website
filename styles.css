@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-options {
-    font-size:30px;
+    font-size: 30px;
 }
 
 nav ul {
@@ -45,38 +45,107 @@ nav ul li a {
 
 }
 
-.carrosel {
-    height: 50%;
-    background-image:url("images/imageExample1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 60%; /*center funciona, mas subi a imagem um tico */
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.carrosel h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0px;
-    padding: 0px 0px;
-    font-size: 100px;
-    background-color: yellow;
-    height: 30%;
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    min-height: 800px;
+    max-height: 800px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+    border-radius: 100%;
+    background-color: rgba(2, 249, 216, 0.3);
+
+}
+
+.prev {
+    left: 100;
+}
+
+.next {
+    right: 100;
+}
+
+
+.prev img {
+    filter: brightness(0) invert(1);
+    /*inverte a cor do icon*/
+    width: 60px;
+    transform: rotate(180deg);
+    /*inverte o icon*/
+}
+
+.next img {
+    filter: brightness(0) invert(1);
+    /*inverte a cor do icon*/
+    width: 60px;
+}
+
+
+.box {
+    position: absolute;
+    top: 10%;
+    right: 400px;
+    color: white;
+    width: 1000px;
+    background-color: rgba(29, 29, 29, 0.7);
+    font-size: 30px;
+    border-radius: 50px;
+    height: auto;
+    overflow: visible;
+}
+
+.box h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 40px 20px;
+    opacity: 100%;
+}
+
+.box p {
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    padding: 10px 20px 20px;
+    opacity: 100%;
 }
 
 .landing {
     display: flex;
     flex-direction: column;
     margin: 70px 100px;
-    
+
 }
 
 .ladoDuplo {
     display: flex;
-    flex-direction:row;;
-    justify-content:center;
+    flex-direction: row;
+    ;
+    justify-content: center;
     align-items: center;
-    gap:200px;
+    gap: 200px;
 }
 
 .descriçao-esq {
@@ -96,9 +165,9 @@ nav ul li a {
 }
 
 .secao-1 {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 40px;
     font-size: 30px;
 }
