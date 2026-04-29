@@ -174,3 +174,73 @@ nav ul li a {
     margin: 40px;
     font-size: 30px;
 }
+
+.descricao-eixos {
+    display: flex;
+    flex-direction: row;
+}
+
+.descricao-eixos img {
+   align-self: center; 
+   width: 200px;
+   margin: 10px;
+}
+
+footer {
+    background-color: #151A60;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.parceiros {
+    margin-right: auto;
+}
+
+.grid-footer-images {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-footer-images img {
+    width: 300px;
+}
+
+#EIA-img {
+    width: 300px;
+}
+
+.parceiros h2 {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.colunas-footer{
+    display: flex;
+    padding: 0px 30px;
+    gap: 200px;
+    width: 40vw;
+
+}
+
+.colunas-footer h3{
+    font-size: 28px;
+}
+
+.colunas-footer p {
+    font-size: 22px;
+}
+
+.coluna-1{
+    margin-left: auto;
+}
+
+footer h2 {
+    font-size: 50px;
+    padding: 30px 0;
+}
