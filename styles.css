@@ -24,6 +24,11 @@ nav {
     font-weight: 700;
 }
 
+.nav-logo a {
+    text-decoration: none;
+    color: white;
+}
+
 .nav-options {
     font-size: 30px;
 }
@@ -163,8 +168,9 @@ nav ul li a {
 }
 
 .img-dir img {
-    width: 750px;
+    width: 500px;
     border-radius: 70px;
+    transform: rotate(-90deg);
 }
 
 .secao-1 {
@@ -196,23 +202,46 @@ footer {
     color: white;
     margin-left: 100px;
     margin-right: 100px;
+    padding: 40px 0 120px 0;
 }
 
 .parceiros {
     margin-right: auto;
 }
 
+.parceiros h2 {
+    font-size: 60px;
+    color: white;
+    border-bottom: 3px solid #BDBDBD;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.parceiros-images {
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.parceiros-images img {
+    width: auto;    /*alinha a altura*/
+    height: 150px; /*alinha a altura*/
+
+}
+
 .grid-footer-images {
     display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 40px;
 }
 .grid-footer-images img {
-    width: 300px;
+    width: auto;
+    height: 140px;
+    filter:drop-shadow(10px 10px 4px #000000)
 }
 
 #EIA-img {
-    width: 300px;
+    height: 100px;
 }
 
 .parceiros h2 {
@@ -221,19 +250,22 @@ footer {
 }
 
 .colunas-footer{
+
     display: flex;
     padding: 0px 30px;
     gap: 200px;
     width: 40vw;
-
 }
 
+
+
 .colunas-footer h3{
-    font-size: 28px;
+    font-size: 40px;
 }
 
 .colunas-footer p {
-    font-size: 22px;
+    color: #CCCCCC;
+    font-size: 28px;
 }
 
 .coluna-1{
@@ -243,4 +275,55 @@ footer {
 footer h2 {
     font-size: 50px;
     padding: 30px 0;
+}
+
+/* página 2 */
+
+.landing-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 100px;
+
+}
+
+.ladoDuplo-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.descriçao-esq-2 {
+    max-width: 1200px;
+    margin: 40px;
+    font-size: 35px;
+}
+.img-dir-2 img {
+    width: 650px;
+    border-radius: 70px;
+    transform: rotate(-90deg)
+}
+
+.sub-footer {
+    background-color:#080A24;
+    color: #ADADAD;
+    font-size: 50px;
+}
+
+.sub-footer-content {
+    display: flex;
+    justify-content: end;
+    margin: 0 auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.sub-footer-content h5{
+    margin: 0 auto;
+    align-self: center;
+}
+
+.sub-footer-content img {
+    width: 400px;
 }
