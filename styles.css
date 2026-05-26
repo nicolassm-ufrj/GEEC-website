@@ -344,6 +344,15 @@ footer h2 {
     width: 400px;
 }
 
+/* responsividade main */
+
+@media (max-width: 1700px) {
+    .ladoDuplo {
+        height: 30%;
+    }
+
+} 
+
 /* página 2 */
 .landing-2 {
     display: flex;
