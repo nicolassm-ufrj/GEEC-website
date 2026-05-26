@@ -277,8 +277,9 @@ footer {
     gap: 40px;
 }
 .grid-footer-images img {
-    width: auto;
+    max-width: 280px;
     height: 140px;
+    object-fit: contain;
     filter:drop-shadow(10px 10px 4px #000000)
 }
 
