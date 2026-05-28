@@ -8,12 +8,18 @@ body {
     background-color: #F0F0F0;
 }
 
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background-color: #3e44a6;
     color: white;
+
     padding: 15px;
     text-decoration: none;
 }
@@ -25,8 +31,8 @@ nav {
 }
 
 .nav-logo a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 .nav-options {
@@ -37,12 +43,13 @@ nav ul {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+
+    margin-left: auto;
+    padding: 0px 10px;
+
     font-size: 15px;
     list-style: none;
     color: white;
-    margin-left: auto;
-    list-style: none;
-    padding: 0px 10px;
 }
 
 nav ul li {
@@ -51,19 +58,25 @@ nav ul li {
 
 nav ul li a {
     position: relative;
+
     color: white;
     text-decoration: none;
+
     display: inline-block;
     padding-bottom: 4px;
 }
 
 /* barra */
 nav ul li a::after {
-    display: block;
     content: "";
-    margin: auto;
+
+    display: block;
+
     width: 0;
     height: 1px;
+
+    margin: auto;
+
     background-color: white;
     transition: width 0.3s;
 }
@@ -74,14 +87,21 @@ nav ul li a:hover::after {
 }
 
 #barra:hover::after {
-    width: 0 !important; /* tira efeito da barra */
+    width: 0 !important;
 }
+
+/* =========================
+   CARROSSEL
+========================= */
 
 .slider {
     position: relative;
+
     width: 100%;
     margin: auto;
+
     overflow: hidden;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -92,8 +112,8 @@ nav ul li a:hover::after {
 
 .slide img {
     width: 100%;
-    min-height: 800px;
-    max-height: 800px;
+    height: clamp(500px, 45vw, 800px);
+
     object-fit: cover;
     vertical-align: middle;
 
@@ -105,87 +125,110 @@ nav ul li a:hover::after {
     0% {
         opacity: 0;
     }
+
     100% {
-        opacity 1;
+        opacity: 1;
     }
 }
+
+/* =========================
+   SETAS
+========================= */
 
 .prev,
 .next {
     cursor: pointer;
+
     position: absolute;
     top: 50%;
+
     transform: translateY(-50%);
+
     padding: 16px;
+
     color: white;
     font-weight: bold;
     font-size: 48px;
+
     border-radius: 100%;
     background-color: rgba(254, 255, 225, 0.363);
-
 }
 
 .prev {
-    left: 100;
+    left: 100px;
 }
 
 .next {
-    right: 100;
+    right: 100px;
 }
 
-
 .prev img {
-    filter: brightness(0) invert(1);
-    /*inverte a cor do icon*/
     width: 60px;
+
+    filter: brightness(0) invert(1);
     transform: rotate(180deg);
-    /*inverte o icon*/
 }
 
 .next img {
-    filter: brightness(0) invert(1);
-    /*inverte a cor do icon*/
     width: 60px;
+
+    filter: brightness(0) invert(1);
 }
 
+/* =========================
+   BOXES
+========================= */
 
 .box {
-    font-family: "Instrument Sans",  Arial, Helvetica, sans-serif;
     position: absolute;
     top: 10%;
     right: 400px;
-    color: white;
-    width: 1000px;
-    background-color: rgba(29, 29, 29, 0.89);
-    font-size: 30px;
-    border-radius: 50px;
+
+    width: 40vw;
     height: auto;
+
     overflow: visible;
+
+    color: white;
+
+    font-family: "Instrument Sans", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    border-radius: 50px;
+    background-color: rgba(29, 29, 29, 0.89);
 }
 
 .box2 {
     right: 1000px;
 }
 
-.box h3{
-    font-size: 50px;
+.box h3 {
     margin: 0;
     padding: 40px 20px;
+
     opacity: 100%;
+
+    font-size: clamp(28px, 3vw, 50px);
 }
 
 .box p {
-    font-size: 35px;
     margin: 0 0 20px 0;
     padding: 10px 20px 20px;
+
     opacity: 100%;
+
+    font-size: clamp(22px, 2vw, 35px);
 }
+
+/* =========================
+   LANDING
+========================= */
 
 .landing {
     display: flex;
     flex-direction: column;
-    margin: 70px 100px;
 
+    margin: 70px 100px;
 }
 
 .ladoDuplo {
@@ -193,7 +236,9 @@ nav ul li a:hover::after {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+
     gap: 200px;
+
     height: 500px;
 }
 
@@ -210,8 +255,10 @@ nav ul li a:hover::after {
 
 .img-dir img {
     width: 500px;
-    border-radius: 70px;
+
     margin-right: 100px;
+
+    border-radius: 70px;
     transform: rotate(-90deg);
 }
 
@@ -219,7 +266,9 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     margin: 40px;
+
     font-size: 30px;
 }
 
@@ -229,10 +278,15 @@ nav ul li a:hover::after {
 }
 
 .descricao-eixos img {
-   align-self: center; 
-   width: 200px;
-   margin: 10px;
+    align-self: center;
+
+    width: 200px;
+    margin: 10px;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background-color: #151A60;
@@ -241,10 +295,12 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    color: white;
+
     margin-left: 100px;
     margin-right: 100px;
     padding: 40px 0 120px 0;
+
+    color: white;
 }
 
 .parceiros {
@@ -252,57 +308,56 @@ footer {
 }
 
 .parceiros h2 {
-    font-size: 60px;
-    color: white;
-    border-bottom: 3px solid #BDBDBD;
-    padding-bottom: 10px;
     width: 80%;
+
+    margin: 0px;
+    padding-bottom: 10px;
+
+    color: white;
+    font-size: 40px;
+
+    border-bottom: 3px solid #BDBDBD;
 }
 
 .parceiros-images {
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto;
 }
 
 .parceiros-images img {
-    width: auto;    /*alinha a altura*/
-    height: 150px; /*alinha a altura*/
-
+    width: auto;
+    height: 150px;
 }
 
 .grid-footer-images {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+
     gap: 40px;
 }
+
 .grid-footer-images img {
     max-width: 280px;
     height: 140px;
+
     object-fit: contain;
-    filter:drop-shadow(10px 10px 4px #000000)
+
+    filter: drop-shadow(10px 10px 4px #000000);
 }
 
 #EIA-img {
     height: 100px;
 }
 
-.parceiros h2 {
-    font-size: 40px;
-    margin: 0px;
-}
-
-.colunas-footer{
-
+.colunas-footer {
     display: flex;
+
     padding: 0px 30px;
     gap: 200px;
-    width: 40vw;
 }
 
-
-
-.colunas-footer h3{
+.colunas-footer h3 {
     font-size: 40px;
 }
 
@@ -311,7 +366,8 @@ footer {
     font-size: 28px;
 }
 
-.coluna-1{
+.coluna-1 {
+    max-width: 300px;
     margin-left: auto;
 }
 
@@ -320,8 +376,13 @@ footer h2 {
     padding: 30px 0;
 }
 
+/* =========================
+   SUB FOOTER
+========================= */
+
 .sub-footer {
-    background-color:#080A24;
+    background-color: #080A24;
+
     color: #ADADAD;
     font-size: 50px;
 }
@@ -329,36 +390,133 @@ footer h2 {
 .sub-footer-content {
     display: flex;
     justify-content: end;
+
     margin: 0 auto;
     margin-left: 100px;
     margin-right: 100px;
 }
 
-.sub-footer-content h5{
-    font-size: 30px;
+.sub-footer-content h5 {
     margin: 0 auto;
     align-self: center;
+
+    font-size: 30px;
 }
 
 .sub-footer-content img {
     width: 400px;
 }
 
-/* responsividade main */
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 2000px) {
+
+    .box {
+        width: 50%;
+        transform: translateX(50%, 50%);
+    }
+
+    .box2 {
+        right: 350px;
+    }
+}
 
 @media (max-width: 1700px) {
+
+    .box2 {
+        right: 350px;
+    }
+
     .ladoDuplo {
         height: 30%;
     }
 
-} 
+    .img-dir img {
+        width: 120px;
+    }
+}
 
-/* página 2 */
+@media (max-width: 1500px) {
+
+    .box {
+        right: 250px;
+    }
+
+    .box h3 {
+        font-size: clamp(18px, 3vw, 50px);
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .colunas-footer {
+        flex-direction: row-reverse;
+        margin-right: auto;
+    }
+
+    .sub-footer-content h5 {
+        margin: 0 auto;
+        align-self: center;
+
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .box {
+        left: 50%;
+        right: auto;
+
+        width: 70vw;
+
+        transform: translateX(-50%);
+    }
+
+    .box p {
+        font-size: 25px;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        padding: 16px;
+
+        color: black;
+        font-weight: bold;
+        font-size: 48px;
+
+        border-radius: 100%;
+        background-color: rgba(244, 252, 0, 0);
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+}
+
+/* =========================
+   PÁGINA 2
+========================= */
+
 .landing-2 {
     display: flex;
     flex-direction: column;
-    margin: 30px 100px;
 
+    margin: 30px 100px;
 }
 
 .ladoDuplo-2 {
@@ -366,60 +524,76 @@ footer h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     gap: 200px;
 }
 
 .descriçao-esq-2 {
     max-width: 1200px;
+
     margin: 40px;
+
     font-size: 35px;
 }
+
 .img-dir-2 img {
     width: 650px;
+
     border-radius: 70px;
-    transform: rotate(-90deg)
+    transform: rotate(-90deg);
 }
-/* página contato */
+
+/* =========================
+   CONTATO
+========================= */
+
 .contato-content {
     width: 1500px;
+
     margin: 0 auto;
     padding-bottom: 200px;
 }
+
 .contato-start {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
+}
 
-}
 .contato-start h1 {
-    font-size: 60px;
     margin-bottom: 0;
+    font-size: 60px;
 }
+
 .contato-start h2 {
-    font-size: 30px;
     margin-bottom: 100px;
+    font-size: 30px;
 }
 
 .contato-description {
-    display:flex;
+    display: flex;
     gap: 100px;
 }
 
 .contato-description-text {
-    width:50%;
+    width: 50%;
 }
 
 .contato-description-text h1 {
-    font-size: 50px;
     margin-left: 10%;
+    font-size: 50px;
 }
 
 .contato-description-text h1::after {
-    display: block;
     content: " ";
-    margin: 0;
+
+    display: block;
+
     width: 420px;
     height: 1px;
+
+    margin: 0;
+
     background-color: black;
 }
 
@@ -428,33 +602,41 @@ footer h2 {
 }
 
 .contato-description img {
-    border-radius: 30px;
     width: 50%;
+
+    border-radius: 30px;
 }
 
 .contato-bar-wrapper {
     position: absolute;
-    width:1200px;
-    height: 300px;
     top: 900px;
     right: 50%;
+
+    width: 1200px;
+    height: 300px;
+
     transform: translateX(50%);
+
     background-color: #D9D9D9;
 }
 
 .contato-bar-content {
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
+
     margin-top: 100px;
 }
 
 .contato-socials h1 {
-    font-size: 40px;
     margin-bottom: 50px;
-    justify-content: center;
+
     text-align: center;
+    justify-content: center;
+
+    font-size: 40px;
 }
+
 .contato-socials h2 {
     text-align: center;
     font-weight: 100;
@@ -464,30 +646,39 @@ footer h2 {
     text-decoration: none;
 }
 
-.blue-circle{
+/* =========================
+   ÍCONES
+========================= */
+
+.blue-circle {
     position: absolute;
-    background-color: #3D44A6;
+
     width: 150px;
     height: 150px;
+
     border-radius: 100px;
+    background-color: #3D44A6;
 }
 
 .logo {
     position: relative;
     left: 15%;
     top: 15%;
+
     transform: translateX(50%, 50%);
 }
 
 .instagram-circle {
     bottom: 230px;
     right: 980px;
-    transform: translateX(20%)
+
+    transform: translateX(20%);
 }
 
 .email-circle {
     bottom: 230px;
     right: 580px;
+
     transform: translateX(20%);
 }
 
@@ -499,6 +690,7 @@ footer h2 {
     bottom: 230px;
     right: 140px;
 }
+
 .localizacao-circle .logo img {
     width: 100px;
 }
