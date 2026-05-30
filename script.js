@@ -1,8 +1,15 @@
+const sidebar = document.querySelector(".sidebar");
+
+function showSidebar() {
+    sidebar.classList.toggle("active"); //
+}
+
 let slideIndex = 0;
 let boxIndex = 0;
 
 showSlides(slideIndex);
 showBoxes(SlideIndex);
+
 
 // next/prev - Controle dos slides
 function nextSlide() {

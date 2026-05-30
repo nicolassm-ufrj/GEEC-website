@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,7 +90,18 @@ nav ul li a:hover::after {
 #barra:hover::after {
     width: 0 !important;
 }
+#icon-navbar {
+    display: none;
+}
+.sidebar {
+    display: flex;
 
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
 /* =========================
    CARROSSEL
 ========================= */
@@ -255,9 +267,7 @@ nav ul li a:hover::after {
 
 .img-dir img {
     width: 500px;
-
     margin-right: 100px;
-
     border-radius: 70px;
     transform: rotate(-90deg);
 }
@@ -271,10 +281,16 @@ nav ul li a:hover::after {
 
     font-size: 30px;
 }
+.secao-1 h1 {
+    margin-bottom: 0px;
+}
 
 .descricao-eixos {
-    display: flex;
+    display: block;
     flex-direction: row;
+}
+.descricao-eixos img {
+    float: left;
 }
 
 .descricao-eixos img {
@@ -407,106 +423,6 @@ footer h2 {
     width: 400px;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-@media (max-width: 2000px) {
-
-    .box {
-        width: 50%;
-        transform: translateX(50%, 50%);
-    }
-
-    .box2 {
-        right: 350px;
-    }
-}
-
-@media (max-width: 1700px) {
-
-    .box2 {
-        right: 350px;
-    }
-
-    .ladoDuplo {
-        height: 30%;
-    }
-
-    .img-dir img {
-        width: 120px;
-    }
-}
-
-@media (max-width: 1500px) {
-
-    .box {
-        right: 250px;
-    }
-
-    .box h3 {
-        font-size: clamp(18px, 3vw, 50px);
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .colunas-footer {
-        flex-direction: row-reverse;
-        margin-right: auto;
-    }
-
-    .sub-footer-content h5 {
-        margin: 0 auto;
-        align-self: center;
-
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .box {
-        left: 50%;
-        right: auto;
-
-        width: 70vw;
-
-        transform: translateX(-50%);
-    }
-
-    .box p {
-        font-size: 25px;
-    }
-
-    .prev,
-    .next {
-        cursor: pointer;
-
-        position: absolute;
-        top: 50%;
-
-        transform: translateY(-50%);
-
-        padding: 16px;
-
-        color: black;
-        font-weight: bold;
-        font-size: 48px;
-
-        border-radius: 100%;
-        background-color: rgba(244, 252, 0, 0);
-    }
-
-    .prev {
-        left: 20px;
-    }
-
-    .next {
-        right: 20px;
-    }
-}
 
 /* =========================
    PÁGINA 2
@@ -538,7 +454,6 @@ footer h2 {
 
 .img-dir-2 img {
     width: 650px;
-
     border-radius: 70px;
     transform: rotate(-90deg);
 }
@@ -697,4 +612,182 @@ footer h2 {
 
 #footer-content-contato {
     padding-top: 500px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 2000px) {
+
+
+    .box {
+        width: 50%;
+        transform: translateX(50%, 50%);
+    }
+
+    .box2 {
+        right: 350px;
+    }
+}
+
+@media (max-width: 1700px) {
+
+    .box2 {
+        right: 350px;
+    }
+
+    .ladoDuplo {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap: 0px;
+        height: 1%;
+    }
+    .img-dir {
+        margin: 0 auto;
+        height: 300px;
+    }
+    .img-dir img {
+        width: 500px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .box {
+        right: 250px;
+    }
+
+    .box h3 {
+        font-size: clamp(18px, 3vw, 50px);
+    }
+
+    .img-dir {
+        margin: 0 auto;
+        height: 200px;
+    }
+    .img-dir img {
+        width: 380px;
+        margin: 0;
+    }
+
+    .footer-content {
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .colunas-footer {
+        flex-direction: row-reverse;
+        margin-right: auto;
+    }
+
+    .sub-footer-content h5 {
+        margin: 0 auto;
+        align-self: center;
+
+        font-size: 25px;
+    }
+}
+@media(max-width: 1320px) { /*quebra nav-bar*/
+    .nav-logo {
+        font-size: 25px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-logo {
+        font-size: 50px;
+    }
+
+    nav ul li a {
+        display: none;
+    }
+
+    #icon-navbar {
+        display:block;
+        width: 70px;
+    }
+
+    .sidebar.active {
+        opacity: 1;
+        max-height: 500px;
+
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #080A24;
+    }
+    .sidebar ul {
+        font-size: 4vw;
+        font-weight: 100;
+        color: white;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        outline: solid red 1px;
+    }
+    .sidebar ul li {
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+    }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    .img-dir {
+        margin: 0 auto;
+        height: 200px;
+    }
+
+    .img-dir img {
+        width: 280px;
+        margin: 0;
+    }
+
+    .box {
+        left: 50%;
+        right: auto;
+
+        width: 70vw;
+
+        transform: translateX(-50%);
+    }
+
+    .box p {
+        font-size: 25px;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        padding: 16px;
+
+        color: black;
+        font-weight: bold;
+        font-size: 48px;
+
+        border-radius: 100%;
+        background-color: rgba(244, 252, 0, 0);
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
 }
