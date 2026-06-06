@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,8 +15,18 @@
             <li><a href="IAeducacao.html">IA na educação</a></li>
             <li><a id="barra">|</a></li>
             <li><a href="contato.html">Contato</a></li>
+            <li onclick="showSidebar()"><img id="icon-navbar" src="icons/IconNav-Bar.png"></li>
         </ul>
     </nav>
+    
+    <div class="sidebar">
+        <ul class="nav-options-sidebar">
+            <li><a href="computacaoEscola.html">Computação na escola</a></li>
+            <li><a href="comptec.html">Competências tecnológicas</a></li>
+            <li><a href="IAeducacao.html">IA na educação</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
 
     <div class="contato-wrapper">
         <div class="contato-content">
@@ -28,18 +39,20 @@
             <div class="contato-description">
                 <div class="contato-description-text">
                     <h1>Meios de Contato</h1>
-                    <p>Por meio destes meios é possível admitir nossos serviços em sua escola/instituição de ensino, assim como requisitar mais informações e perguntas.Nosso time entrará em contato brevemente após sua mensagem para iniciar o processo de integração ou sanar dúvidas relacionadas ao projeto.</p>
+                    <p>Por meio destes meios é possível admitir nossos serviços em sua escola/instituição de ensino,
+                        assim como requisitar mais informações e perguntas.Nosso time entrará em contato brevemente após
+                        sua mensagem para iniciar o processo de integração ou sanar dúvidas relacionadas ao projeto.</p>
                 </div>
 
                 <img src="images/imageExample1.png">
-          </div>
+            </div>
 
         </div>
     </div>
 
 
     <div class="contato-bar-wrapper">
-        <div  class="contato-bar-content">
+        <div class="contato-bar-content">
 
             <div class="contato-secao">
 
@@ -56,7 +69,7 @@
 
             </div>
 
-             <div class="contato-secao">
+            <div class="contato-secao">
 
                 <div class="blue-circle email-circle">
                     <div class="logo">
@@ -90,54 +103,52 @@
         </div>
     </div>
 
-
     <footer>
-            <div id="footer-content-contato" class="footer-content">
+        <div id="footer-content-contato" class="footer-content">
 
-                <div class="parceiros">
-                    <h2>Instituições Parceiras</h2>
+            <div class="parceiros">
+                <h2>Instituições Parceiras</h2>
 
-                    <div class="parceiros-images">
-                        <img src="images/image-removebg-preview(1).png">
-                        <img src="images/UFRJ logo(2).png">
-                    </div>
-
-                    <h2>Apoio</h2>
-
-                    <div class="grid-footer-images">
-                        <img src="images/EIA(1).png">
-                        <img id="EIA-IMG" src="images/Complexo de Formacao de Professores.png">
-                    </div>
-
+                <div class="parceiros-images">
+                    <img src="images/image-removebg-preview(1).png">
+                    <img src="images/UFRJ logo(2).png">
                 </div>
 
-                <div class="colunas-footer">
-                    <div class="coluna-1">
-                        <h3>Localização</h3>
-                        <p>
-                            Centro de Ciências Matemáticas e da Natureza<br> Avenida Athos da Silveira Ramos, 274 - Bloco E
-                            Cidade Universitária
-                            Rio de Janeiro, RJ, Brasil
-                            CEP: 21941-916
-                        </p>
-                    </div>
+                <h2>Apoio</h2>
 
-                    <div class="coluna-2">
-                        <h3>Contatos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-                        <p>Email: geec@ic.ufrj.br</p>
-                        <p>Instagram: @geec-ufrj</p>
-                        <p>Formulário de contato</p>
-                    </div>
+                <div class="grid-footer-images">
+                    <img src="images/EIA(1).png">
+                    <img id="EIA-IMG" src="images/Complexo de Formacao de Professores.png">
                 </div>
+
             </div>
 
-            <div class="sub-footer">
-                <div class="sub-footer-content">
-                    <h5>© Todos os direitos reservados - Instituto de Computação / GEEC</h5>
-                    <img src="images/logo-bcc-removebg-preview 1(1).png">
+            <div class="colunas-footer">
+                <div class="coluna-1">
+                    <h3>Localização</h3>
+                    <p>
+                        Centro de Ciências Matemáticas e da Natureza<br> Avenida Athos da Silveira Ramos, 274 - Bloco E
+                        Cidade Universitária
+                        Rio de Janeiro, RJ, Brasil
+                        CEP: 21941-916
+                    </p>
+                </div>
+
+                <div class="coluna-2">
+                    <h3>Contatos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                    <p>Email: geec@ic.ufrj.br</p>
+                    <p>Instagram: @geec-ufrj</p>
                 </div>
             </div>
+        </div>
+
+        <div class="sub-footer">
+            <div class="sub-footer-content">
+                <h5>© Todos os direitos reservados - Instituto de Computação / GEEC</h5>
+                <img src="images/logo-bcc-removebg-preview 1(1).png">
+            </div>
+        </div>
     </footer>
 
-
+    <script src="script.js"></script>
 </body>

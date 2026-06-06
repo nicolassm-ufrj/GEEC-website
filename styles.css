@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
+
 body {
-    overflow-x: hidden;
+    overflow-x: ;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F0F0F0;
+    
 }
 
 /* =========================
@@ -343,22 +345,20 @@ footer {
 .parceiros-images img {
     width: auto;
     height: 150px;
+    filter: drop-shadow(10px 10px 4px #000000);
 }
 
 .grid-footer-images {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-
     gap: 40px;
 }
 
 .grid-footer-images img {
     max-width: 280px;
     height: 140px;
-
     object-fit: contain;
-
     filter: drop-shadow(10px 10px 4px #000000);
 }
 
@@ -368,7 +368,6 @@ footer {
 
 .colunas-footer {
     display: flex;
-
     padding: 0px 30px;
     gap: 200px;
 }
@@ -386,7 +385,10 @@ footer {
     max-width: 300px;
     margin-left: auto;
 }
-
+.coluna-2 p a {
+    color: #ADAD;
+    text-decoration: none;
+}
 footer h2 {
     font-size: 50px;
     padding: 30px 0;
@@ -463,9 +465,9 @@ footer h2 {
 ========================= */
 
 .contato-content {
-    width: 1500px;
-
+    max-width: 1500px;
     margin: 0 auto;
+    width: 90%;
     padding-bottom: 200px;
 }
 
@@ -473,6 +475,8 @@ footer h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
+    align-self:center;
 }
 
 .contato-start h1 {
@@ -524,14 +528,11 @@ footer h2 {
 
 .contato-bar-wrapper {
     position: absolute;
-    top: 900px;
     right: 50%;
-
-    width: 1200px;
+    width: 85vw;
+    margin: -100px auto 0;
     height: 300px;
-
     transform: translateX(50%);
-
     background-color: #D9D9D9;
 }
 
@@ -541,6 +542,14 @@ footer h2 {
     justify-content: space-around;
 
     margin-top: 100px;
+}
+
+.contato-secao {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contato-socials h1 {
@@ -554,7 +563,7 @@ footer h2 {
 
 .contato-socials h2 {
     text-align: center;
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .contato-socials h2 a {
@@ -568,11 +577,16 @@ footer h2 {
 .blue-circle {
     position: absolute;
 
+    bottom: 80%;
+    left: 50%;
+
     width: 150px;
     height: 150px;
 
-    border-radius: 100px;
+    border-radius: 50%;
     background-color: #3D44A6;
+
+    transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -583,28 +597,11 @@ footer h2 {
     transform: translateX(50%, 50%);
 }
 
-.instagram-circle {
-    bottom: 230px;
-    right: 980px;
-
-    transform: translateX(20%);
-}
-
-.email-circle {
-    bottom: 230px;
-    right: 580px;
-
-    transform: translateX(20%);
-}
 
 .email-circle .logo img {
     width: 100px;
 }
 
-.localizacao-circle {
-    bottom: 230px;
-    right: 140px;
-}
 
 .localizacao-circle .logo img {
     width: 100px;
@@ -612,7 +609,7 @@ footer h2 {
 
 #footer-content-contato {
     padding-top: 500px;
-}
+}       
 
 /* =========================
    RESPONSIVIDADE
@@ -680,6 +677,8 @@ footer h2 {
 
     .colunas-footer {
         flex-direction: row-reverse;
+        gap: 0px;
+        padding: 0px;
         margin-right: auto;
     }
 
@@ -689,6 +688,27 @@ footer h2 {
 
         font-size: 25px;
     }
+    .contato-description {
+        justify-content: center;
+    }
+
+    /* página contato */
+    .contato-bar-wrapper {
+        margin-bottom: 200px;
+        font-weight:500;
+    }
+    .contato-description img {
+        display: none;
+    }
+    .contato-description-text {
+    width: 100vw;
+    }
+    .contato-secao {
+        width: 100%;
+    }
+    .contato-bar-wrapper {
+        width: 100vw;
+    }
 }
 @media(max-width: 1320px) { /*quebra nav-bar*/
     .nav-logo {
@@ -697,11 +717,19 @@ footer h2 {
     nav ul li a {
         font-size: 20px;
     }
+    .contato-description {
+        margin-bottom: 100px;
+    }
 }
 
 @media (max-width: 1000px) {
     .nav-logo {
         font-size: 50px;
+    }
+    
+    .parceiros-images {
+        display: grid;
+        grid-template-columns: auto;
     }
 
     nav ul li a {
@@ -731,6 +759,7 @@ footer h2 {
         width: 100%;
         margin: 0px;
         outline: solid red 1px;
+        align-self: center;
     }
     .sidebar ul li {
         display: flex;
@@ -790,4 +819,55 @@ footer h2 {
     .next {
         right: 20px;
     }
+    .landing {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0px 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        margin: 0 20vw /* gambiarra pra centralizar o footer */;
+        padding: 40px 0 120px 0;
+        color: white;
+    }
+    .parceiros h2 {
+        font-size: 29px;
+    }
+    .grid-footer-images {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .colunas-footer {
+        flex-direction: column;
+        gap: 0px;
+        padding: 0px;
+        margin-right: auto;
+    }
+    .coluna-1 {
+        margin: 0;
+    }
+    .sub-footer-content {
+        gap: 30px;
+    }
+    .sub-footer-content h5 {
+        text-align:center;
+    }
+
+    .sub-footer-content img {
+        object-fit: contain;
+        width: 300px;
+    }
+}
+#construcao {
+    display: flex;
+    justify-content: center;
+
+    font-size: 3rem;
 }
